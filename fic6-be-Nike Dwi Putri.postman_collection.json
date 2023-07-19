@@ -1,0 +1,1531 @@
+{
+	"info": {
+		"_postman_id": "f9a79f10-0583-480a-920d-ecbac5223d97",
+		"name": "fic6-be-Nike Dwi Putri",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"nike\",\r\n    \"password\" : \"123456\",\r\n    \"email\" : \"dwiputrinike@gmail.com\",\r\n    \"username\" : \"nike\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1337/api/auth/local/register",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"auth",
+						"local",
+						"register"
+					]
+				},
+				"description": "localhost:1337/api/auth/local/register"
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"nike\",\r\n    \"password\" : \"123456\",\r\n    \"email\" : \"dwiputrinike@gmail.com\",\r\n    \"username\" : \"nike\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1337/api/auth/local/register",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"auth",
+								"local",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "10"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "9"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1689640641"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "344"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 00:36:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NjQwNTgwLCJleHAiOjE2OTIyMzI1ODB9.MgdcJj9ZjK0lMcQ_pwM9zkfWkCLfru9kzcZGfZze6mU\",\n    \"user\": {\n        \"id\": 1,\n        \"username\": \"nike\",\n        \"email\": \"dwiputrinike@gmail.com\",\n        \"provider\": \"local\",\n        \"confirmed\": true,\n        \"blocked\": false,\n        \"createdAt\": \"2023-07-18T00:36:20.274Z\",\n        \"updatedAt\": \"2023-07-18T00:36:20.274Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "api login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identifier\" : \"dwiputrinike@gmail.com\",\r\n    \"password\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1337/api/auth/local",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"auth",
+						"local"
+					]
+				},
+				"description": "localhost:1337/api/auth/local"
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"identifier\" : \"dwiputrinike@gmail.com\",\r\n    \"password\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1337/api/auth/local",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"auth",
+								"local"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "10"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "9"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1689641955"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "344"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 00:58:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjg5NjQxODk0LCJleHAiOjE2OTIyMzM4OTR9.Eg7bzIrg1rmeCCRwsVPsussgDKfxMu7H3panAhoMAEk\",\n    \"user\": {\n        \"id\": 1,\n        \"username\": \"nike\",\n        \"email\": \"dwiputrinike@gmail.com\",\n        \"provider\": \"local\",\n        \"confirmed\": true,\n        \"blocked\": false,\n        \"createdAt\": \"2023-07-18T00:36:20.274Z\",\n        \"updatedAt\": \"2023-07-18T00:36:20.274Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "api get all product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1337/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "localhost:1337/api/products"
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1337/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "740"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 02:12:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"attributes\": {\n                \"name\": \"Sambal Cumi Hot\",\n                \"description\": \"Sambal cumi dengan level sangat pedas\",\n                \"quantity\": 100,\n                \"price\": 50000,\n                \"inStock\": true,\n                \"image\": \"sambal cumi.jpeg\",\n                \"distributor\": \"Sambel Poetri\",\n                \"createdAt\": \"2023-07-18T02:00:34.302Z\",\n                \"updatedAt\": \"2023-07-18T02:04:19.978Z\",\n                \"publishedAt\": \"2023-07-18T02:04:19.973Z\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"attributes\": {\n                \"name\": \"Sambal Cumi Pete\",\n                \"description\": \"Sambal Cumi Level Sedang Dengan Tambahan Pete\",\n                \"quantity\": 50,\n                \"price\": 60000,\n                \"inStock\": true,\n                \"image\": \"sambal cumi pete.jpeg\",\n                \"distributor\": \"Sambel Poetri\",\n                \"createdAt\": \"2023-07-18T02:12:11.075Z\",\n                \"updatedAt\": \"2023-07-18T02:12:12.564Z\",\n                \"publishedAt\": \"2023-07-18T02:12:12.558Z\"\n            }\n        }\n    ],\n    \"meta\": {\n        \"pagination\": {\n            \"page\": 1,\n            \"pageSize\": 25,\n            \"pageCount\": 1,\n            \"total\": 2\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get one product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:1337/api/products/1",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				},
+				"description": "localhost:1337/api/products/1"
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:1337/api/products/1",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "341"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 02:12:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"attributes\": {\n            \"name\": \"Sambal Cumi Hot\",\n            \"description\": \"Sambal cumi dengan level sangat pedas\",\n            \"quantity\": 100,\n            \"price\": 50000,\n            \"inStock\": true,\n            \"image\": \"sambal cumi.jpeg\",\n            \"distributor\": \"Sambel Poetri\",\n            \"createdAt\": \"2023-07-18T02:00:34.302Z\",\n            \"updatedAt\": \"2023-07-18T02:04:19.978Z\",\n            \"publishedAt\": \"2023-07-18T02:04:19.973Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "api create product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwtToken}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n       \r\n            \"name\": \"Sambal Teri Medan Jeletot\",\r\n            \"description\": \"Sambal Teri Medan dengan Level Pedas Extra Gurih Pedas\",\r\n            \"quantity\": 80,\r\n            \"price\": 45000,\r\n            \"inStock\": true,\r\n            \"image\": \"sambal teri medan.jpg\",\r\n            \"distributor\": \"Sambel Poetri\"\r\n            \r\n        \r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1337/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "localhost:1337/api/products"
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n       \r\n            \"name\": \"Sambal Teri Medan Jeletot\",\r\n            \"description\": \"Sambal Teri Medan dengan Level Pedas Extra Gurih Pedas\",\r\n            \"quantity\": 80,\r\n            \"price\": 45000,\r\n            \"inStock\": true,\r\n            \"image\": \"sambal teri medan.jpg\",\r\n            \"distributor\": \"Sambel Poetri\"\r\n            \r\n        \r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1337/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "372"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 02:19:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"attributes\": {\n            \"name\": \"Sambal Teri Medan Jeletot\",\n            \"description\": \"Sambal Teri Medan dengan Level Pedas Extra Gurih Pedas\",\n            \"quantity\": 80,\n            \"price\": 45000,\n            \"inStock\": true,\n            \"image\": \"sambal teri medan.jpg\",\n            \"distributor\": \"Sambel Poetri\",\n            \"createdAt\": \"2023-07-18T02:19:25.496Z\",\n            \"updatedAt\": \"2023-07-18T02:19:25.496Z\",\n            \"publishedAt\": \"2023-07-18T02:19:25.494Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "api edit product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwtToken}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \r\n            \"name\": \"Sambal Cumi Pete Sedang\",\r\n            \"description\": \"Sambal Cumi Level Sedang Dengan Tambahan Pete dan Daun Jeruk\",\r\n            \"quantity\": 40,\r\n            \"price\": 55000,\r\n            \"inStock\": true,\r\n            \"image\": \"sambalcumipete.jpg\",\r\n            \"distributor\": \"Sambel Poetri\"\r\n        }\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1337/api/products/2",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products",
+						"2"
+					]
+				},
+				"description": "localhost:1337/api/products/2"
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \r\n            \"name\": \"Sambal Cumi Pete Sedang\",\r\n            \"description\": \"Sambal Cumi Level Sedang Dengan Tambahan Pete dan Daun Jeruk\",\r\n            \"quantity\": 40,\r\n            \"price\": 55000,\r\n            \"inStock\": true,\r\n            \"image\": \"sambalcumipete.jpg\",\r\n            \"distributor\": \"Sambel Poetri\"\r\n        }\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1337/api/products/2",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "373"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 02:25:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"attributes\": {\n            \"name\": \"Sambal Cumi Pete Sedang\",\n            \"description\": \"Sambal Cumi Level Sedang Dengan Tambahan Pete dan Daun Jeruk\",\n            \"quantity\": 40,\n            \"price\": 55000,\n            \"inStock\": true,\n            \"image\": \"sambalcumipete.jpg\",\n            \"distributor\": \"Sambel Poetri\",\n            \"createdAt\": \"2023-07-18T02:12:11.075Z\",\n            \"updatedAt\": \"2023-07-18T02:25:05.289Z\",\n            \"publishedAt\": \"2023-07-18T02:12:12.558Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "api delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwtToken}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:1337/api/products/3",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"products",
+						"3"
+					]
+				},
+				"description": "localhost:1337/api/products/3"
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:1337/api/products/3",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"products",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "372"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 02:26:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"attributes\": {\n            \"name\": \"Sambal Teri Medan Jeletot\",\n            \"description\": \"Sambal Teri Medan dengan Level Pedas Extra Gurih Pedas\",\n            \"quantity\": 80,\n            \"price\": 45000,\n            \"inStock\": true,\n            \"image\": \"sambal teri medan.jpg\",\n            \"distributor\": \"Sambel Poetri\",\n            \"createdAt\": \"2023-07-18T02:19:25.496Z\",\n            \"updatedAt\": \"2023-07-18T02:19:25.496Z\",\n            \"publishedAt\": \"2023-07-18T02:19:25.494Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "localhost:1337/uploads/thumbnail_sambal_cumi_39a3bb4db1.jpeg",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:1337/uploads/thumbnail_sambal_cumi_39a3bb4db1.jpeg",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"uploads",
+						"thumbnail_sambal_cumi_39a3bb4db1.jpeg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:1337/api/upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwtToken}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/C:/development/ecommerce/image/sambal cumi.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:1337/api/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api create order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwtToken}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\":{\r\n        \"items\":[\r\n            {\r\n                \"id\": 1,\r\n                \"productName\": \"Sambal Cumi Hot\",\r\n                \"price\" : 50000,\r\n                \"quantity\" : 2\r\n            },\r\n            {\r\n                \"id\": 2,\r\n                \"productName\": \"Sambal Cumi Pete Sedang\",\r\n                \"price\" : 55000,\r\n                \"quantity\" : 1\r\n            }\r\n        ],\r\n        \"totalPrice\": 195000,\r\n        \"deliveryAddress\": \"Jalan Mawas I, Manggala, Makassar\",\r\n        \"courierName\": \"JNE\",\r\n        \"shippingCost\": 40000,\r\n        \"statusOrder\" : \"waitingPayment\"\r\n\r\n    }\r\n\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1337/api/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"orders"
+					]
+				},
+				"description": "localhost:1337/api/orders"
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":{\r\n        \"items\":[\r\n            {\r\n                \"id\": 1,\r\n                \"productName\": \"Sambal Cumi Hot\",\r\n                \"price\" : 50000,\r\n                \"quantity\" : 2\r\n            },\r\n            {\r\n                \"id\": 2,\r\n                \"productName\": \"Sambal Cumi Pete Sedang\",\r\n                \"price\" : 55000,\r\n                \"quantity\" : 1\r\n            }\r\n        ],\r\n        \"totalPrice\": 195000,\r\n        \"deliveryAddress\": \"Jalan Mawas I, Manggala, Makassar\",\r\n        \"courierName\": \"JNE\",\r\n        \"shippingCost\": 40000,\r\n        \"statusOrder\" : \"waitingPayment\"\r\n\r\n    }\r\n\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1337/api/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "430"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 03:37:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"attributes\": {\n            \"items\": [\n                {\n                    \"id\": 1,\n                    \"productName\": \"Sambal Cumi Hot\",\n                    \"price\": 50000,\n                    \"quantity\": 2\n                },\n                {\n                    \"id\": 2,\n                    \"productName\": \"Sambal Cumi Pete Sedang\",\n                    \"price\": 55000,\n                    \"quantity\": 1\n                }\n            ],\n            \"totalPrice\": 195000,\n            \"deliveryAddress\": \"Jalan Mawas I, Manggala, Makassar\",\n            \"courierName\": \"JNE\",\n            \"shippingCost\": 40000,\n            \"createdAt\": \"2023-07-18T03:37:28.605Z\",\n            \"updatedAt\": \"2023-07-18T03:37:28.605Z\",\n            \"publishedAt\": \"2023-07-18T03:37:28.601Z\"\n        }\n    },\n    \"meta\": {}\n}"
+				}
+			]
+		},
+		{
+			"name": "api get order",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwtToken}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:1337/api/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"orders"
+					]
+				},
+				"description": "localhost:1337/api/orders"
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:1337/api/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "512"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 03:40:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"attributes\": {\n                \"items\": [\n                    {\n                        \"id\": 1,\n                        \"productName\": \"Sambal Cumi Hot\",\n                        \"price\": 50000,\n                        \"quantity\": 2\n                    },\n                    {\n                        \"id\": 2,\n                        \"productName\": \"Sambal Cumi Pete Sedang\",\n                        \"price\": 55000,\n                        \"quantity\": 1\n                    }\n                ],\n                \"totalPrice\": 195000,\n                \"deliveryAddress\": \"Jalan Mawas I, Manggala, Makassar\",\n                \"courierName\": \"JNE\",\n                \"shippingCost\": 40000,\n                \"createdAt\": \"2023-07-18T03:37:28.605Z\",\n                \"updatedAt\": \"2023-07-18T03:37:28.605Z\",\n                \"publishedAt\": \"2023-07-18T03:37:28.601Z\",\n                \"statusOrder\": null\n            }\n        }\n    ],\n    \"meta\": {\n        \"pagination\": {\n            \"page\": 1,\n            \"pageSize\": 25,\n            \"pageCount\": 1,\n            \"total\": 1\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "api create order sandbox",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{jwtToken}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\":{\r\n        \"items\":[\r\n            {\r\n                \"id\": 1,\r\n                \"productName\": \"Sambal Cumi Hot\",\r\n                \"price\" : 50000,\r\n                \"quantity\" : 2\r\n            },\r\n            {\r\n                \"id\": 2,\r\n                \"productName\": \"Sambal Cumi Pete Sedang\",\r\n                \"price\" : 55000,\r\n                \"quantity\" : 1\r\n            }\r\n        ],\r\n        \"totalPrice\": 195000,\r\n        \"deliveryAddress\": \"Jalan Mawas I, Manggala, Makassar\",\r\n        \"courierName\": \"JNE\",\r\n        \"shippingCost\": 40000,\r\n        \"statusOrder\" : \"waitingPayment\"\r\n\r\n    }\r\n\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1337/api/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{jwtToken}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":{\r\n        \"items\":[\r\n            {\r\n                \"id\": 1,\r\n                \"productName\": \"Sambal Cumi Hot\",\r\n                \"price\" : 50000,\r\n                \"quantity\" : 2\r\n            },\r\n            {\r\n                \"id\": 2,\r\n                \"productName\": \"Sambal Cumi Pete Sedang\",\r\n                \"price\" : 55000,\r\n                \"quantity\" : 1\r\n            }\r\n        ],\r\n        \"totalPrice\": 195000,\r\n        \"deliveryAddress\": \"Jalan Mawas I, Manggala, Makassar\",\r\n        \"courierName\": \"JNE\",\r\n        \"shippingCost\": 40000,\r\n        \"statusOrder\" : \"waitingPayment\"\r\n\r\n    }\r\n\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1337/api/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "155"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 18 Jul 2023 06:33:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"7513fc04-212f-4a9a-a159-a26810e4367c\",\n    \"redirect_url\": \"https://app.sandbox.midtrans.com/snap/v3/redirection/7513fc04-212f-4a9a-a159-a26810e4367c\"\n}"
+				}
+			]
+		},
+		{
+			"name": "api sandbox midtrans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://app.sandbox.midtrans.com/snap/v3/redirection/7513fc04-212f-4a9a-a159-a26810e4367c",
+					"protocol": "https",
+					"host": [
+						"app",
+						"sandbox",
+						"midtrans",
+						"com"
+					],
+					"path": [
+						"snap",
+						"v3",
+						"redirection",
+						"7513fc04-212f-4a9a-a159-a26810e4367c"
+					]
+				},
+				"description": "https://app.sandbox.midtrans.com/snap/v3/redirection/7513fc04-212f-4a9a-a159-a26810e4367c"
+			},
+			"response": []
+		},
+		{
+			"name": "https://app.midtrans.com/snap/v3/redirection/3c004744-20c3-4e99-9672-db067a17e07d",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://app.midtrans.com/snap/v3/redirection/3c004744-20c3-4e99-9672-db067a17e07d",
+					"protocol": "https",
+					"host": [
+						"app",
+						"midtrans",
+						"com"
+					],
+					"path": [
+						"snap",
+						"v3",
+						"redirection",
+						"3c004744-20c3-4e99-9672-db067a17e07d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api payment callback",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n             \"transaction_type\": \"off-us\",\r\n             \"transaction_time\": \"2023-07-19 10:05:49\",\r\n             \"transaction_status\": \"pending\",\r\n             \"transaction_id\": \"424abe28-f3fa-4e45-952f-0e453b49c2eb\",\r\n             \"status_message\": \"midtrans payment notification\",\r\n             \"status_code\": \"201\",\r\n             \"signature_key\": \"4ee12dc0e5621d1fc7df5b69958a43a73875a749d6ee0a1446560c76439fd5494ef26cf4df665d79e3249bed7980e1eebac20ef10719d0d56d32961c28826816\",\r\n            \"payment_type\": \"qris\",\r\n            \"order_id\": \"12\",\r\n            \"merchant_id\": \"G620144341\",\r\n            \"gross_amount\": \"195000.00\",\r\n            \"fraud_status\": \"accept\",\r\n            \"expiry_time\": \"2023-07-19 10:20:49\",\r\n            \"currency\": \"IDR\"\r\n}\r\n\r\n\r\n\r\n    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1337/api/payment-callbacks",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"payment-callbacks"
+					]
+				},
+				"description": "localhost:1337/api/payment-callbacks"
+			},
+			"response": [
+				{
+					"name": "200 ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n             \"transaction_type\": \"off-us\",\r\n             \"transaction_time\": \"2023-07-19 10:05:49\",\r\n             \"transaction_status\": \"pending\",\r\n             \"transaction_id\": \"424abe28-f3fa-4e45-952f-0e453b49c2eb\",\r\n             \"status_message\": \"midtrans payment notification\",\r\n             \"status_code\": \"201\",\r\n             \"signature_key\": \"4ee12dc0e5621d1fc7df5b69958a43a73875a749d6ee0a1446560c76439fd5494ef26cf4df665d79e3249bed7980e1eebac20ef10719d0d56d32961c28826816\",\r\n            \"payment_type\": \"qris\",\r\n            \"order_id\": \"12\",\r\n            \"merchant_id\": \"G620144341\",\r\n            \"gross_amount\": \"195000.00\",\r\n            \"fraud_status\": \"accept\",\r\n            \"expiry_time\": \"2023-07-19 10:20:49\",\r\n            \"currency\": \"IDR\"\r\n}\r\n\r\n\r\n\r\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:1337/api/payment-callbacks",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"payment-callbacks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "connect-src 'self' https:;img-src 'self' data: blob: https://market-assets.strapi.io;media-src 'self' data: blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline'"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Strapi <strapi.io>"
+						},
+						{
+							"key": "Content-Length",
+							"value": "17"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jul 2023 04:14:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": \"sukses\"\n}"
+				}
+			]
+		}
+	]
+}
